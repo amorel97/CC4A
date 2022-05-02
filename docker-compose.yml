@@ -1,0 +1,15 @@
+version: "3"
+
+services:
+
+  appjava:
+    image: java:8
+    environment:
+      - DISPLAY=$DISPLAY
+
+    volumes:
+        - /data/Documents/CC4A/:/home
+        - /tmp/.X11-unix:/tmp/.X11-unix
+    command: ["/home/start.sh"]
+
+
